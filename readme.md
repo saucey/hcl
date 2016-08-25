@@ -29,7 +29,7 @@ npm run bower -- install
 
 Populate Mongo with seed (back-end) server:
 ```
-npm run node -- lib/seed.js
+node lib/seed.js
 ```
 
 And finally run the (back-end) server:
