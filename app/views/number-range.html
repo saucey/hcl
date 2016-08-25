@@ -1,0 +1,19 @@
+<div class="page" ng-controller="numberRangeCtrl">
+	<div class="form">
+		<form name="myForm" ng-submit="submit(number, myForm)" class="login-form">
+			<p class="message">Please select a number ranging between 1 and 10 <a href="#">You have {{attempts}} attempts</a></p>
+			<input type="text" ng-model="number.name" ng-required="true" placeholder="Number Name"/>
+			<input type="number" ng-model="number.range" ng-required="true" placeholder="Number Range"/>
+			<button type="submit">Submit Guess</button>
+			<div class="alert alert-{{success.alertType}}" role="alert" ng-show="success.prompt">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				{{success.message}}
+			</div>
+			<ul class="attempts-number-list">
+				<li ng-repeat="no in numberattepmts">
+					{{no.number}}
+				</li>
+			</ul>
+		</form>
+	</div>
+</div>
